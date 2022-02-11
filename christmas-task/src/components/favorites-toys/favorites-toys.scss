@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+
+.toys {
+  grid-area: toys;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 84px;
+    min-height: 84px;
+    background-color: rgba(17, 113, 179, .3);
+    border: 2px solid #abc4e0;
+    border-radius: 10px;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    cursor: move;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-family: $font_neucha;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000,
+                -1px 0 1px #000, 0 -1px 1px #000;
+  }
+}

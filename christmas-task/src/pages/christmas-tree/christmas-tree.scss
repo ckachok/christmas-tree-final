@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+
+.christmas-tree-container {
+  display: grid;
+  grid-template-areas: 
+    "christmas-trees christmas-tree toys"
+    "bgs christmas-tree toys"
+    "garlands christmas-tree decorated"
+    "reset-button christmas-tree decorated";
+  grid-template-rows: auto;
+  grid-template-columns: 25% auto 25%;
+  grid-gap: 20px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.block-title {
+  margin: 0 0 15px 0;
+  font-family: $font_gilroy;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000,
+              -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.reset-setting {
+  grid-area: reset-button;
+  width: 220px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  font-family: $font_gilroy;
+  font-weight: 500;
+  font-size: 18px;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000,
+              -1px 0 1px #000, 0 -1px 1px #000;
+  color: #fff;
+  background-color: rgba(17, 113, 179, .3);
+  border-radius: 20px;
+  border: 2px solid #abc4e0;
+  backdrop-filter: blur(6px);
+  transition: box-shadow .5s;
+
+  &:hover {
+    box-shadow: 0 0 10px #fff, 0 0 10px #ffd700,
+                0 0 30px #fff, 0 0 30px #ffd700;
+    transition: box-shadow .5s;
+  }
+
+  &.active {
+    animation: decrease .3s;
+  } 
+}
